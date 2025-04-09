@@ -5,3 +5,17 @@ enum ViewState {
   /// The view is loading something.
   busy,
 }
+
+enum MessageType {
+  /// Represents error message.
+  error,
+
+  /// Represents warning message.
+  warning,
+
+  /// Represents info message.
+  info,
+
+  /// Represents random message.
+  random
+}

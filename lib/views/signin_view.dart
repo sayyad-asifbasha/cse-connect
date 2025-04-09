@@ -18,6 +18,7 @@ class _SignInState extends State<SignIn> {
   Widget build(BuildContext context) {
     return BaseView<SignInViewModel>(
       builder: (context, model, child) {
+        model.context=context;
         return Scaffold(
             body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

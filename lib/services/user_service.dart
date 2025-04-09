@@ -37,7 +37,7 @@ class UserService {
       return userCredential.user;
     } catch (e) {
       print('Error during Google Sign-In: $e');
-      navigationService.showSnackBar(e.toString());
+      // navigationService.showSnackBar(e.toString());
       return null;
     }
   }
@@ -78,7 +78,7 @@ class UserService {
     }
     catch(error)
     {
-      navigationService.showSnackBar(error as String);
+      // navigationService.showSnackBar(error as String);
     }
     return;
   }
