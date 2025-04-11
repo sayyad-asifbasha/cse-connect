@@ -17,6 +17,10 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return BaseView<SignInViewModel>(
+      onModelReady: (model) async{
+        await Future.delayed(Duration(seconds: 2));
+        model.onInitialize();
+      },
       builder: (context, model, child) {
         model.context=context;
         return Scaffold(

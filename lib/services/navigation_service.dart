@@ -37,7 +37,6 @@ class NavigationService {
   }
 
   void showSnackBar(
-    BuildContext context,
     String message, {
     Duration duration = const Duration(seconds: 2),
   }) {
@@ -51,7 +50,7 @@ class NavigationService {
         behavior: SnackBarBehavior.floating,
         duration: duration,
         padding: EdgeInsets.zero,
-        backgroundColor: Theme.of(context).colorScheme.onTertiaryFixedVariant,
+        backgroundColor: const Color(0xFF0B2626),
       ),
     );
   }

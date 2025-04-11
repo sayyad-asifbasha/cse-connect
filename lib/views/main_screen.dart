@@ -1,4 +1,7 @@
+import 'package:cse_connect/constants/routing_constants.dart';
+import 'package:cse_connect/locator.dart';
 import 'package:cse_connect/services/size_config.dart';
+import 'package:cse_connect/services/user_service.dart';
 import 'package:cse_connect/view_model/main_screen_view_model.dart';
 import 'package:cse_connect/views/base_view.dart';
 import 'package:cse_connect/views/home_view.dart';
@@ -39,6 +42,17 @@ class _MainScreenState extends State<MainScreen>
               color: Theme.of(context).colorScheme.onPrimary,
             ),
             systemOverlayStyle: SystemUiOverlayStyle.light,
+            actions: [
+              IconButton(
+                  onPressed: ()
+                  {
+                    userService.logOut();
+                    navigationService.removeAllAndPush(Routes.signInScreen, Routes.mainScreen);
+                  },
+                  icon: Icon(Icons.logout_rounded),
+                color: Colors.black,
+              ),
+            ],
           ),
           body: SafeArea(
             child: Stack(

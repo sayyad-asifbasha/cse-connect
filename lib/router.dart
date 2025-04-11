@@ -1,3 +1,4 @@
+import 'package:cse_connect/model/semester_model.dart';
 import 'package:cse_connect/views/chapters_view.dart';
 import 'package:cse_connect/views/main_screen.dart';
 import 'package:cse_connect/views/sem_subjects_view.dart';
@@ -15,8 +16,13 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       final String course=settings.arguments! as String;
       return MaterialPageRoute(builder: (context)=> SemSubjects(course: course));
     case Routes.subjectScreen :
-      final String subjectName=settings.arguments! as String;
-      return MaterialPageRoute(builder: (context)=> Chapters(subjectName: subjectName));
+      final List<dynamic> arguments = settings.arguments! as List<dynamic>;
+      final SubjectModel units=arguments[0] as SubjectModel;
+      final String name=arguments[1] as String;
+      return MaterialPageRoute(builder: (context)=> Chapters(
+        units: units,
+        name:name,
+      ),);
     default:
       return MaterialPageRoute(
         builder: (context) => const Scaffold(

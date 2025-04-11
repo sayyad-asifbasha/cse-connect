@@ -1,3 +1,4 @@
+import 'package:cse_connect/services/db_service.dart';
 import 'package:cse_connect/services/navigation_service.dart';
 import 'package:cse_connect/services/size_config.dart';
 import 'package:cse_connect/services/user_service.dart';
@@ -14,11 +15,14 @@ GetIt locator = GetIt.instance;
 final navigationService = locator<NavigationService>();
 final sizeConfig = locator<SizeConfig>();
 final userService=locator<UserService>();
+final dbService=locator<DBService>();
 
 Future<void> setUpLocator() async {
   locator.registerSingleton(NavigationService());
   locator.registerSingleton(SizeConfig());
   locator.registerSingleton(UserService());
+  locator.registerSingleton(DBService());
+
 
   locator.registerFactory(() => AppTheme());
   locator.registerFactory(() => MainScreenViewModel());
