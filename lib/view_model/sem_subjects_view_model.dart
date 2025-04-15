@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cse_connect/locator.dart';
 import 'package:cse_connect/services/db_service.dart';
 import 'package:cse_connect/view_model/base_view_model.dart';
 import 'package:cse_connect/model/semester_model.dart';
@@ -22,11 +21,6 @@ class SemSubjectsViewModel extends BaseModel {
       } else {
         _semesters = SemestersModel(semesters: {});
       }
-
-      _semesters.semesters.entries.forEach((entry) {
-        print(entry.key);
-      });
-
       notifyListeners();
     } catch (e) {
       print("Error loading semesters: $e");
