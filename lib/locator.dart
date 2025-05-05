@@ -5,6 +5,7 @@ import 'package:cse_connect/services/user_service.dart';
 import 'package:cse_connect/view_model/chapters_view_model.dart';
 import 'package:cse_connect/view_model/home_view_model.dart';
 import 'package:cse_connect/view_model/main_screen_view_model.dart';
+import 'package:cse_connect/view_model/notice_board_view_model.dart';
 import 'package:cse_connect/view_model/pdf_view_model.dart';
 import 'package:cse_connect/view_model/sem_subjects_view_model.dart';
 import 'package:cse_connect/view_model/signin_view_model.dart';
@@ -32,4 +33,5 @@ Future<void> setUpLocator() async {
   locator.registerFactory(()=>ChaptersViewModel());
   locator.registerFactory(()=>SignInViewModel());
   locator.registerFactory(()=>PDFViewModel());
+  locator.registerFactory(()=>NoticeBoardViewModel());
 }

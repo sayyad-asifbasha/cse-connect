@@ -5,6 +5,8 @@ import 'package:cse_connect/services/user_service.dart';
 import 'package:cse_connect/view_model/main_screen_view_model.dart';
 import 'package:cse_connect/views/base_view.dart';
 import 'package:cse_connect/views/home_view.dart';
+import 'package:cse_connect/views/notice_board_view.dart';
+import 'package:cse_connect/views/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -62,14 +64,10 @@ class _MainScreenState extends State<MainScreen>
                   onPageChanged: (index) {
                     model.pageChanged(index);
                   },
-                  children: [
+                  children: const [
                     Home(),
-                    Center(
-                      child: Text("Rain"),
-                    ),
-                    Center(
-                      child: Text("Sun"),
-                    )
+                    NoticeBoard(),
+                    Profile()
                   ],
                 ),
                 Positioned(

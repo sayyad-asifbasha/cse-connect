@@ -35,12 +35,12 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         navigatorKey: navigationService.navigatorKey,
         onGenerateRoute: router.generateRoute,
-        initialRoute: Routes.mainScreen,
+        initialRoute: Routes.signInScreen,
         onGenerateInitialRoutes: (String initialRouteName) {
           return [
             router.generateRoute(
               const RouteSettings(
-                name: Routes.signInScreen,
+                name: Routes.mainScreen,
               ),
             ),
           ];

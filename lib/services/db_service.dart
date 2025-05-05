@@ -3,6 +3,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 class DBService {
   static CollectionReference users = FirebaseFirestore.instance.collection('Users');
   static CollectionReference course_years = FirebaseFirestore.instance.collection('Course_Years');
+  static CollectionReference notice_board = FirebaseFirestore.instance.collection('Notice_Board');
 
 
 

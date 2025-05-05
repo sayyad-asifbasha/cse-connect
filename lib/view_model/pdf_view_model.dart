@@ -16,7 +16,6 @@ class PDFViewModel extends BaseModel{
       if(response.statusCode==200)
         {
           _pdfBytes=response.bodyBytes;
-          print("Suucrss");
         }
     }catch(error)
     {

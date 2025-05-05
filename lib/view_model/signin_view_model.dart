@@ -26,7 +26,7 @@ class SignInViewModel extends BaseModel{
       print("loading");
       _isLoading=!_isLoading;
       notifyListeners();
-      navigationService.showSnackBar("helllo");
+      // navigationService.showSnackBar("helllo");
     final userData=await userService.googleSignIn();
     await userService.createNewUser(
       UserModel(

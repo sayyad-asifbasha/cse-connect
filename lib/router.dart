@@ -1,6 +1,7 @@
 import 'package:cse_connect/model/semester_model.dart';
 import 'package:cse_connect/views/chapters_view.dart';
 import 'package:cse_connect/views/main_screen.dart';
+import 'package:cse_connect/views/notice_board_view.dart';
 import 'package:cse_connect/views/pdf_view.dart';
 import 'package:cse_connect/views/sem_subjects_view.dart';
 import 'package:cse_connect/views/signin_view.dart';
@@ -13,6 +14,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context)=>const SignIn());
     case Routes.mainScreen:
       return MaterialPageRoute(builder: (context) => const MainScreen());
+    case Routes.noticeBoardScreen:
+      return MaterialPageRoute(builder: (context) => const NoticeBoard());
     case Routes.semSubjectScreen :
       final String course=settings.arguments! as String;
       return MaterialPageRoute(builder: (context)=> SemSubjects(course: course));
